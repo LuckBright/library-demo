@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>传统引入 JS 文件</title>
+</head>
+<body>
+</body>
+<script src="lib/type.js"></script>
+<script src="lib/clone.js"></script>
+
+<script>
+  let a = { c: 1 }
+  let b = clone(a); // 深拷贝
+
+  b.c = 333
+  console.log(a, b);
+</script>
+</html>
