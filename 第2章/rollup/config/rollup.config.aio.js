@@ -2,6 +2,7 @@
 // UMD
 
 var nodeResolve = require('rollup-plugin-node-resolve');
+var commonjs = require('rollup-plugin-commonjs');
 var common = require('./rollup.js');
 
 module.exports = {
@@ -18,6 +19,9 @@ module.exports = {
       // https://github.com/rollup/rollup-plugin-node-resolve
       extensions: ['.js'] // 接收一个数组
     }),
+    commonjs({
+      include: 'node_modules/**',
+  }),
     common.getCompiler()
   ]
 }
