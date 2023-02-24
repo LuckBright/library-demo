@@ -18,5 +18,6 @@ module.exports = {
       // https://github.com/rollup/rollup-plugin-node-resolve
       extensions: ['.js'] // 接收一个数组
     }),
+    common.getCompiler()
   ]
 }
