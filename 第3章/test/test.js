@@ -1,36 +1,14 @@
 var expect = require('expect.js')
+var clone = require('../src/index.js').clone
 
 // expect 输入 equal 输出 
 // 输入与输出必须一致，否则测试不通过
 // it 代表一个测试用例
-describe('单元测试', function () {
-  describe('hello test', function () {
-    it('hello', function () {
-      expect(1).to.equal(1)
-    })
-  })
-  it('单侧', function () {
-    expect(2).to.equal(2)
-  })
-})
 
 // 对于函数的测试，可以按照参数分组，每个参数一组，在对一个参数进行测试时，保证其他参数无影响。
 
-var leftpad = require('../leftpad')
-
-describe('leftpad', function () {
-  
-  it('test str', function () {
-    // 参数 str 长度 等于 count 长度，直接输出原有的 str
-    expect(leftpad('any str', 5, '3')).to.equal('any str')
-    // 任意字符串
-    expect(leftpad('a2[]{}NaN', 10, '3')).to.equal('3a2[]{}NaN')
-  })
-})
 
 // clone 函数的测试
-
-var clone = require('../clone')
 
 describe('function clone', function () {
   it('正确的测试用例', function () {

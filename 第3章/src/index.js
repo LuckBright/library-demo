@@ -1,8 +1,6 @@
-function type(data) {
-	return Object.prototype.toString.call(data).slice(8, -1).toLowerCase();
-}
+import { type } from './type'
 
-function clone(source) {
+export function clone(source) {
 	const t = type(source);
 	if (t !== 'object' && t !== 'array') {
 		return source;
@@ -26,5 +24,3 @@ function clone(source) {
 
 	return target;
 }
-
-module.exports = clone;
